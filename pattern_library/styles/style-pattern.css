@@ -142,3 +142,8 @@ section {
   text-transform: uppercase;
   color: #fff;
 }
+
+.images img {
+    height: 1000px;
+    width: 500px;
+}
