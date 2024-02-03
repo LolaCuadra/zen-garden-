@@ -1,5 +1,39 @@
-.atom {
-    color: $primary-color;
-    font-family: $font-family;
+@use 'variables';
 
+// need a mixin for circles in the nav 
+@mixin circle-shape($diameter: 50px, $bg-color: black) { 
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+    background-color: $bg-color;
 }
+
+body {
+    background-color: $body-background-color;
+    color: $headlines-color;
+    font-family: $body-font;
+}
+
+header[role="banner"] { // tbd
+  background-color: $form-background-color_2; 
+  color: $headlines-color;
+  text-align: center;
+  padding: 20px ; 
+  margin-bottom: 20px; 
+}
+
+h1, h2 { 
+  background-color: $color-tbd; 
+  color: $headlines-color; 
+  margin: 0;
+  border: 2px solid black;
+  padding: 10px; 
+  display: inline-block;
+}
+
+footer {
+    background-color: $color-tbd; 
+    color: $headlines-color; 
+    text-align: center; 
+    padding: 10px; 
+  }
