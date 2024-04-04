@@ -290,10 +290,34 @@ footer{
 }
 
 }
+
 @media (min-width: 768px) {
 
     body p  {
         font-size: 80px;
+    }
+
+    body a{
+        color: #333;
+        text-decoration: none;
+        font-size: 80px;
+    }
+
+    h1{
+        font-size: 100px;
+    }
+
+    h1::after{
+        content: "";
+        display: block;
+        height: 8px; 
+        background-color: black;
+        margin-top: 1em;
+    }
+
+    h2{
+        font-size: 200px;
+        border-left: 8px solid black;
     }
 
     body h3{
@@ -307,140 +331,68 @@ footer{
         text-transform: uppercase;
         font-family: 'Playfair Display', serif;
         padding: 20px;
-        
-    
     }
     
-    a {
-        font-size: 20px;
-            color: inherit; /* Use the color inherited from the parent element */
-            text-decoration: none; /* Remove underline */
-        
+    .intro h3::before {
+        content: '';
+        display: block;
+        height: 200px; 
+        background: linear-gradient(to right, black 75%, white 25%); /* Half white, half black gradient */
+        margin: 5px 0; 
+        border: 3px solid black;
     }
     
+    .intro h3 {
+        padding-top: 80px;
+        position: relative; 
+        font-size: 40px;
+    }
+    
+    
+    .intro h3::before {
+        position: absolute;
+        top: -10px; 
+        left: 0;
+        right: 0;
+    }
+    
+    .intro{
+        padding-bottom: 30px;
+    }
+
+
     .explanation {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         background-color: #589ea6;
         padding: 50px;
-        h3 {
+
+    }
+    .explanation h3 {
             grid-column: 2/3;
             color: white;
         }
-        p {
+    .explanation p {
             grid-column: 2/3;
             text-align: left;
             color: white;
-        }
-        
     }
     
     .requirements {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* Three columns */
-        grid-gap: 20px; /* Gap between grid items */
+        grid-template-columns: repeat(3, 1fr); 
+        grid-gap: 20px; 
         border: 1px solid;
         padding: 50px;
-        h3 {
-            grid-column: 1 / -1; /* Span across all columns */
-            margin-bottom: 20px; /* Add some space below the h3 */
+    }
+    .requirements h3 {
+            grid-column: 1 / -1; 
+            margin-bottom: 20px; 
         }
-        p {
+
+    .requirements  p {
             grid-column: 2/4;
             text-align: left;
-        }
     }
 }
 
-    /* body {
-        padding: 30px; 
-        margin: 20px;
-    }
-
-    h1{
-        font-size: 80px;
-    }
-
-    h2{
-        font-size: 100px;
-        border-left: 3px solid black; 
-    }  */
-    
-    /* #zen-summary, #zen-preamble {
-        display: grid;
-        grid-template-columns: 50% 50%; 
-        grid-gap: 20px; 
-    }
-      
-    #zen-summary .summary {
-        grid-column: 1; 
-    }
-
-    #zen-preamble .preamble {
-        grid-column: 2; 
-    }
-      
-
-      #zen-summary h1 {
-        font-size: 50px; 
-      }
-      
-      #zen-preamble h2 {
-        font-size: 50px; 
-      }
-
-
-    /* bottom */
-
-    /* .wrapper {
-        display: grid;
-        
-        grid-template-areas: "selection" 
-                            "content";
-        gap: 20px; */
-    /* }
-      
-    .design-selection {
-        grid-area: selection;
-    }
-    
-    .design-archives {
-        font-size: 50px;
-        grid-area: content;
-        padding-left: 200px;
-    }
-      
-    .zen-resources {
-        color: black;
-        grid-area: content;
-        padding-left: 1600px;
-        border-left: 2px solid red;
-    } */
-
-    /* .design-selection ul li::before {
-        content: counter(my-counter); 
-        counter-increment: my-counter; 
-        position: absolute; 
-        font-size: 50px;
-        left: -20px; 
-        top: 20%; 
-        transform: translateY(30%); 
-        width: 100px; 
-        height:100px; 
-        text-align: center; 
-        line-height: 50px; 
-        background-color: lightgrey; 
-        border-radius: 50%; 
-        margin: 30px;
-    }
-
-    .design-selection::before{
-        float: right;
-        font-size: 80px;
-        border-top: 20px;
-        border-bottom: 30px;
-    }
-
-    .design-selection{
-        margin: 180px;
-    } */
