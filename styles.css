@@ -343,24 +343,49 @@ footer{
     }
     
     .intro h3 {
-        padding-top: 80px;
+        padding-top: 500px;
         position: relative; 
-        font-size: 40px;
+        font-size: 100px;
+        padding-left: 20px;
     }
-    
-    
+      
     .intro h3::before {
         position: absolute;
         top: -10px; 
         left: 0;
         right: 0;
     }
-    
-    .intro{
-        padding-bottom: 30px;
+    /* todo fix this what the heck */
+    .intro.preamble {
+        padding-bottom: 300px;
     }
 
+    .intro.preamble p{
+        float: left;
+    }
 
+    /* benefits */
+
+    .benefits {
+        background-color: #B2A3B5;
+        display: grid;
+    }
+
+    .benefits::after{
+        content: "";
+        display: block;
+        height: 100px; 
+        background-color: black;
+        margin-top: 1em;
+
+    }
+
+    #zen-supporting{
+        display: grid;
+        grid-template-rows: reepat(3, 1fr);
+        padding: 50px;
+    }
+   
     .explanation {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
