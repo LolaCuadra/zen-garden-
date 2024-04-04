@@ -1,3 +1,4 @@
+@media (max-width: 768px) {
 body{
     background-color: white;
     font-family: 'Karla', sans-seri;
@@ -288,22 +289,84 @@ footer{
     font-weight: bold;
 }
 
+}
 @media (min-width: 768px) {
 
-    body {
-        padding: 20px; 
+    body p  {
+        font-size: 80px;
     }
-/* 
+
+    body h3{
+        font-size: 120px;
+
+    }
+    
+    h3 {
+        text-align: left;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-family: 'Playfair Display', serif;
+        padding: 20px;
+        
+    
+    }
+    
+    a {
+        font-size: 20px;
+            color: inherit; /* Use the color inherited from the parent element */
+            text-decoration: none; /* Remove underline */
+        
+    }
+    
+    .explanation {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #589ea6;
+        padding: 50px;
+        h3 {
+            grid-column: 2/3;
+            color: white;
+        }
+        p {
+            grid-column: 2/3;
+            text-align: left;
+            color: white;
+        }
+        
+    }
+    
+    .requirements {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+        grid-gap: 20px; /* Gap between grid items */
+        border: 1px solid;
+        padding: 50px;
+        h3 {
+            grid-column: 1 / -1; /* Span across all columns */
+            margin-bottom: 20px; /* Add some space below the h3 */
+        }
+        p {
+            grid-column: 2/4;
+            text-align: left;
+        }
+    }
+}
+
+    /* body {
+        padding: 30px; 
+        margin: 20px;
+    }
+
     h1{
         font-size: 80px;
     }
 
     h2{
         font-size: 100px;
-        border: 3px solid black; 
-    } */
+        border-left: 3px solid black; 
+    }  */
     
-    #zen-summary, #zen-preamble {
+    /* #zen-summary, #zen-preamble {
         display: grid;
         grid-template-columns: 50% 50%; 
         grid-gap: 20px; 
@@ -319,23 +382,23 @@ footer{
       
 
       #zen-summary h1 {
-        font-size: 80px; 
+        font-size: 50px; 
       }
       
       #zen-preamble h2 {
-        font-size: 100px; 
+        font-size: 50px; 
       }
 
 
     /* bottom */
 
-    .wrapper {
+    /* .wrapper {
         display: grid;
-        /* grid-template-columns: 1fr auto; */
+        
         grid-template-areas: "selection" 
                             "content";
-        gap: 20px;
-    }
+        gap: 20px; */
+    /* }
       
     .design-selection {
         grid-area: selection;
@@ -348,13 +411,13 @@ footer{
     }
       
     .zen-resources {
-        color: red;
+        color: black;
         grid-area: content;
         padding-left: 1600px;
         border-left: 2px solid red;
-    }
+    } */
 
-    .design-selection ul li::before {
+    /* .design-selection ul li::before {
         content: counter(my-counter); 
         counter-increment: my-counter; 
         position: absolute; 
@@ -368,7 +431,16 @@ footer{
         line-height: 50px; 
         background-color: lightgrey; 
         border-radius: 50%; 
+        margin: 30px;
     }
-    
-      
-}
+
+    .design-selection::before{
+        float: right;
+        font-size: 80px;
+        border-top: 20px;
+        border-bottom: 30px;
+    }
+
+    .design-selection{
+        margin: 180px;
+    } */
