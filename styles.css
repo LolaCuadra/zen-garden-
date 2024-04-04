@@ -1,0 +1,374 @@
+body{
+    background-color: white;
+    font-family: 'Karla', sans-seri;
+    padding: 10px;
+}
+
+body p{
+    font-size: 20px;
+}
+
+body h3 {
+    font-size: 40px;
+    text-transform: uppercase
+}
+
+body a{
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+h1{
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+
+}
+
+h1::after {
+    content: "";
+    display: block;
+    height: 3px; 
+    background-color: black;
+    margin-top: 1em;
+}
+
+.intro header {
+    position: relative; 
+}
+  
+.intro header h1::before {
+    content: '';
+    display: block;
+    width: 50px; 
+    height: 50px;
+    background-color: black; 
+    border-radius: 50%; 
+    position: absolute;
+    top: calc(100% + -270px);
+    right: -6%;
+    transform: translateX(-50%); 
+    padding-bottom: 5px;
+}
+
+h2{
+    padding-top: 90px;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+/* CSS to style the links in rectangle boxes */
+
+p > a[href="/examples/index"] {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 3px solid black;
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+}
+  
+p > a[href="/examples/index"]:hover {
+    background-color: #e0e0e0;
+}
+  
+p > a[href="/examples/style.css"] {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+}
+
+p > a[href="/examples/style.css"]:hover {
+    background-color: #e0e0e0;
+}
+  
+/* break in between intro */
+
+.intro h3::before {
+    content: '';
+    display: block;
+    height: 40px; 
+    background: linear-gradient(to right, black 75%, white 25%); /* Half white, half black gradient */
+    margin: 5px 0; 
+    border: 3px solid black;
+}
+
+.intro h3 {
+    padding-top: 80px;
+    position: relative; 
+    font-size: 40px;
+}
+
+
+.intro h3::before {
+    position: absolute;
+    top: -10px; 
+    left: 0;
+    right: 0;
+}
+
+.intro{
+    padding-bottom: 30px;
+}
+
+/* TO DO : there is only one ball showing instead of three */
+
+/* the three little circles */
+
+.explanation{
+    background-color:black;
+    padding: 5px;
+}
+.explanation p{
+    color: white;
+}
+.explanation h3 {
+    padding: 1px;
+    padding-top: 40px;
+    position: relative; 
+    color: white;
+    font-size: 30px;
+}
+
+.explanation h3::before {
+    content: ''; 
+    position: absolute; 
+    top: -10px; 
+    left: 0; 
+    display: inline-block;
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%; 
+    background-color: white; 
+    margin-right: 5px; 
+}
+
+.explanation h3::before:nth-child(2) {
+    top: -20px; 
+    left: 20px; 
+}
+
+.explanation h3::before:nth-child(3) {
+    top: -30px; 
+    left: 50px; 
+}
+
+/* participation */
+
+.participation h3{
+    font-size: 40px;
+}
+
+#zen-benefits {
+    background-color: lightgrey; /* Light grey background color */
+}
+  
+#zen-benefits {
+    content: "";
+    display: block;
+    border-top: 5px solid black; 
+    margin-bottom: 20px; 
+}
+  
+#zen-benefits::after {
+    content: "";
+    display: block;
+    border-top: 80px solid black; 
+    margin-top: 20px; 
+}
+
+/* TO DO : transparent circle is showing put not positioning correctly  */
+
+/* .benefits::before {
+    float: right;
+    background-color: transparent;
+    margin-left: 20px;
+    position: relative;
+    width: 40px; 
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%; 
+} */
+  
+
+.benefits h3 {
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+.requirements h3{
+    padding-top: 30px;
+    font-size: 40px;
+}
+
+/* no footer is display ? */
+
+footer{
+    display: none;
+}
+
+ /* bullet section */
+
+.requirements::after {
+    content: "";
+    display: block;
+    height: 3px; 
+    background-color: black;
+    margin-top: 1em;
+}
+
+.design-selection::after {
+    content: "";
+    display: block;
+    height: 3px; 
+    background-color: black;
+    margin-top: 1em;
+}
+
+.design-selection h3 {
+   font-size: 40px;
+}
+
+.design-selection .select {
+    display: none; 
+}
+
+.design-selection::before {
+    content: "VIEW ALL DESIGNS"; 
+    font-size: 40px;
+    margin-bottom: 40px; 
+    margin-top: 40px;
+    display: block; 
+}
+
+ .design-selection ul {
+    list-style-type: none; 
+    counter-reset: my-counter; 
+}
+
+.design-selection ul li {
+    position: relative;
+}
+    
+.design-selection ul li::before {
+    content: counter(my-counter); 
+    counter-increment: my-counter; 
+    position: absolute; 
+    font-size: 50px;
+    left: -20px; 
+    top: 20%; 
+    transform: translateY(6%); 
+    width: 60px; 
+    height:60px; 
+    text-align: center; 
+    line-height: 20px; 
+    background-color: lightgrey; 
+    border-radius: 50%; 
+}
+
+.design-selection nav ul li {
+    margin-bottom: 60px;
+}
+
+.design-selection .select {
+    margin-bottom: 30px; 
+    margin-top: 30px;
+}
+
+
+.design-selection li {
+    font-size: 20px;
+    padding-left: 50px;
+}
+
+.design-selection li a{
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        padding: 20px; 
+    }
+/* 
+    h1{
+        font-size: 80px;
+    }
+
+    h2{
+        font-size: 100px;
+        border: 3px solid black; 
+    } */
+    
+    #zen-summary, #zen-preamble {
+        display: grid;
+        grid-template-columns: 50% 50%; 
+        grid-gap: 20px; 
+    }
+      
+    #zen-summary .summary {
+        grid-column: 1; 
+    }
+
+    #zen-preamble .preamble {
+        grid-column: 2; 
+    }
+      
+
+      #zen-summary h1 {
+        font-size: 80px; 
+      }
+      
+      #zen-preamble h2 {
+        font-size: 100px; 
+      }
+
+
+    /* bottom */
+
+    .wrapper {
+        display: grid;
+        /* grid-template-columns: 1fr auto; */
+        grid-template-areas: "selection" 
+                            "content";
+        gap: 20px;
+    }
+      
+    .design-selection {
+        grid-area: selection;
+    }
+    
+    .design-archives {
+        font-size: 50px;
+        grid-area: content;
+        padding-left: 200px;
+    }
+      
+    .zen-resources {
+        color: red;
+        grid-area: content;
+        padding-left: 1600px;
+        border-left: 2px solid red;
+    }
+
+    .design-selection ul li::before {
+        content: counter(my-counter); 
+        counter-increment: my-counter; 
+        position: absolute; 
+        font-size: 50px;
+        left: -20px; 
+        top: 20%; 
+        transform: translateY(30%); 
+        width: 100px; 
+        height:100px; 
+        text-align: center; 
+        line-height: 50px; 
+        background-color: lightgrey; 
+        border-radius: 50%; 
+    }
+    
+      
+}
