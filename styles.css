@@ -43,7 +43,7 @@ h1::after {
     display: block;
     width: 50px; 
     height: 50px;
-    background-color: black; 
+    background-color: #B2A3B5; 
     border-radius: 50%; 
     position: absolute;
     top: calc(100% + -270px);
@@ -92,7 +92,7 @@ p > a[href="/examples/style.css"]:hover {
     content: '';
     display: block;
     height: 40px; 
-    background: linear-gradient(to right, black 75%, white 25%); /* Half white, half black gradient */
+    background: linear-gradient(to right, #589ea6 75%, #ebdccb 25%); /* Half white, half black gradient */
     margin: 5px 0; 
     border: 3px solid black;
 }
@@ -120,8 +120,8 @@ p > a[href="/examples/style.css"]:hover {
 /* the three little circles */
 
 .explanation{
-    background-color:black;
-    padding: 5px;
+    background-color: #589ea6;
+    padding: 10px;
 }
 .explanation p{
     color: white;
@@ -131,7 +131,7 @@ p > a[href="/examples/style.css"]:hover {
     padding-top: 40px;
     position: relative; 
     color: white;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .explanation h3::before {
@@ -164,7 +164,7 @@ p > a[href="/examples/style.css"]:hover {
 }
 
 #zen-benefits {
-    background-color: lightgrey; /* Light grey background color */
+    background-color: #B2A3B5; /* Light grey background color */
 }
   
 #zen-benefits {
@@ -289,6 +289,7 @@ footer{
     font-weight: bold;
 }
 
+
 }
 
 @media (min-width: 768px) {
@@ -356,39 +357,57 @@ footer{
           "summary summary"
           "preamble preamble"
           "explanation explanation"
-          "participation benefits"
+          "participation participation"
           "requirements requirements"
           "sidebar sidebar"      
-      }
+    }
       
-      .sidebar{
+    .sidebar{
         grid-area: sidebar;
-      }
-      #zen-intro {
+    }
+    #zen-intro {
         grid-area: header;
-      }
+    }
       
-      #zen-summary {
+    #zen-summary {
         grid-area: summary;
-      }
+    }
       
-      #zen-preamble {
+    #zen-preamble {
         grid-area: preamble;
-      }
+    }
+
+
+    #zen-participation,
+    #zen-benefits {
+        display: inline-block; 
+        width: 50%;
+        vertical-align: top; 
+        padding: 0;
+    }
+        
+    #zen-benefits::after {
+    content: "";
+    display: block;
+    border-top: 900px solid black;
+    margin-top: 20px;
+    }
+
       
-      #zen-explanation {
+    #zen-explanation {
         grid-area: explanation;
-      }
+    }
       
-      #zen-participation {
+    #zen-participation {
         grid-area: participation;
-      }
+    }
       
-      #zen-benefits {
+    #zen-benefits {
+        float: right;
         grid-area: benefits;
-      }
+    }
       
-      #zen-requirements {
+    #zen-requirements {
         grid-area: requirements;
     }
       
@@ -398,7 +417,7 @@ footer{
         grid-template-areas:
           "design design"
           "archives resources"; 
-      }
+    }
 
     #design-selection {
         grid-area: design;
@@ -518,10 +537,10 @@ footer{
         border: 1px solid;
     }
     
-    .sidebar .design-archives h3,
+    /* .sidebar .design-archives h3,
     .zen-resources h3 {
         font-size: 30px;
-    }
+    } */
     
     .sidebar .design-archives ul,
     .zen-resources ul {
@@ -532,7 +551,11 @@ footer{
     .sidebar .design-archives li,
     .zen-resources li {
         text-align: left;
-    }    
+    }   
+    
+    .design-selection {
+        padding: 80px;
+    }
 
     footer{
         display: none;
@@ -541,7 +564,22 @@ footer{
     h1{
         background-color: #B2A3B5;
         color: white;
-        font-size: 100px;
+        font-size: 90px;
+    }
+
+    .intro header h1::before {
+        content: '';
+        display: block;
+        width: 250px; 
+        height: 250px;
+        background-color: #B2A3B5; 
+        border-radius: 50%; 
+        position: absolute;
+        top: calc(10% );
+        right: 190px;
+        transform: translateX(-50%); 
+        padding-bottom: 5px;
+        border: 5px solid black;
     }
 
     h1::after{
@@ -568,10 +606,11 @@ footer{
     .intro h3::before {
         content: '';
         display: block;
-        height: 200px;
-        background: linear-gradient(to right, #589ea6 75%, white 25%); 
+        height: 110px;
+        width: auto;
+        background: linear-gradient(to right, #589ea6 75%, #B2A3B5 25%); 
         margin: 5px;
-        border: 3px solid black;
+        border: 8px solid black;
     }
         
     a {
@@ -644,13 +683,4 @@ footer{
         background-color: #B2A3B5;
         padding: 80px;
     }
-        
-    #zen-benefits::after {
-    content: "";
-    display: block;
-    border-top: 500px solid black;
-    margin-top: 20px;
-    }
-
 }
-
