@@ -291,7 +291,7 @@ footer{
 
 
 }
-
+/* lARGE VIEW  */
 @media (min-width: 768px) {
     body {
         width: 90vw; 
